@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;DonutHeaven/NeopixelGetaway.ino&apos; to &apos;DonutHeaven.ino&apos;" description="Rename resource &apos;NeopixelGetaway.ino&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="NeopixelGetaway.ino" name="DonutHeaven.ino" stamp="1537979217529" updateReferences="true"/>
+</session>

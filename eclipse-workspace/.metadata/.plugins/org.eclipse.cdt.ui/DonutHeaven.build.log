@@ -1,0 +1,27 @@
+18:30:38 **** Incremental Build of configuration Release for project DonutHeaven ****
+"C:\\dataP\\Tools\\Eclipse\\eclipseArduino\\arduinoPlugin\\tools\\make\\make" all 
+'Building target: DonutHeaven'
+'Printing size:'
+"C:\dataP\Tools\Eclipse\eclipseArduino\arduinoPlugin\tools\arduino\avr-gcc\4.8.1-arduino5/bin/avr-size" -A "C:/dataP/ws_git/donut_heaven/Arduino/DonutHeaven/Release/DonutHeaven.elf"
+C:/dataP/ws_git/donut_heaven/Arduino/DonutHeaven/Release/DonutHeaven.elf  :
+section           size      addr
+.data               24   8388864
+.text             5966         0
+.bss                78   8388888
+.comment            17         0
+.debug_aranges     784         0
+.debug_info      16831         0
+.debug_abbrev     3909         0
+.debug_line       5749         0
+.debug_frame      2356         0
+.debug_str        4523         0
+.debug_loc       11868         0
+.debug_ranges      744         0
+Total            52849
+
+
+'Finished building target: DonutHeaven'
+' '
+
+18:30:38 Build Finished (took 641ms)
+
