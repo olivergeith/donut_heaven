@@ -277,7 +277,7 @@ void DonutHeaven::drawBarGraphWheeled(int millies) {
 }
 
 void DonutHeaven::drawBarGraphWheeledColorfull(int millies) {
-	if (millies % 25 == 0) {
+	if (millies % 100 == 0) {
 		int center = strip.numPixels() / 2 + 1;
 		if (lauflichtStep == center) {
 			lauflichtStep = 0;

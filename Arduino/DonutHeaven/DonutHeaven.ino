@@ -15,8 +15,7 @@
 //   NEO_KHZ400  400 KHz bitstream (e.g. FLORA pixels)
 //   NEO_KHZ800  800 KHz bitstream (e.g. High Density LED strip), correct for neopixel stick
 
-Adafruit_NeoPixel donutHeavenStrip = Adafruit_NeoPixel(19, 7,
-		NEO_GRB + NEO_KHZ800);
+Adafruit_NeoPixel donutHeavenStrip = Adafruit_NeoPixel(19, 6, NEO_GRB + NEO_KHZ800);
 DonutHeaven donutHeaven(donutHeavenStrip);
 
 int millies = 0;
@@ -76,7 +75,7 @@ void drawDonutHeaven() {
 	}
 	if (millies == 0) {
 		donutMode++;
-		if (donutMode == 7)
+		if (donutMode == 8)
 			donutMode = 0;
 	}
 

@@ -1,4 +1,4 @@
-18:30:38 **** Incremental Build of configuration Release for project DonutHeaven ****
+17:31:39 **** Incremental Build of configuration Release for project DonutHeaven ****
 "C:\\dataP\\Tools\\Eclipse\\eclipseArduino\\arduinoPlugin\\tools\\make\\make" all 
 'Building target: DonutHeaven'
 'Printing size:'
@@ -23,5 +23,5 @@ Total            52849
 'Finished building target: DonutHeaven'
 ' '
 
-18:30:38 Build Finished (took 641ms)
+17:31:42 Build Finished (took 3s.281ms)
 

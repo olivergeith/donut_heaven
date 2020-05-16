@@ -1,9 +1,9 @@
-714=1
+714=2
 Automatically\ import\ libraries=true
 Board=Arduino Nano
 Board\ Custom\ Option\ Selections=Processor\=ATmega328
 Build\ before\ upload\ option=YES
-FuStatub=128
+FuStatub=127
 FuStatus=100
 Open\ serial\ connections\ with\ the\ monitor=true
 Private\ Library\ Path=C\:\\dataP\\ws_git\\arduino-projects\\libraries;C\:/Users/Oliver/Arduino/libraries;
