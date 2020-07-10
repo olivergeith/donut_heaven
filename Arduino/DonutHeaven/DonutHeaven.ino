@@ -6,6 +6,7 @@
 #include <Adafruit_NeoPixel.h>
 
 #include "DonutHeaven.h"
+//#include "LegLight8.h"
 
 // Parameter 1 = number of pixels in strip,  neopixel stick has 8
 // Parameter 2 = pin number (most are valid)
@@ -15,69 +16,113 @@
 //   NEO_KHZ400  400 KHz bitstream (e.g. FLORA pixels)
 //   NEO_KHZ800  800 KHz bitstream (e.g. High Density LED strip), correct for neopixel stick
 
-Adafruit_NeoPixel donutHeavenStrip = Adafruit_NeoPixel(19, 6, NEO_GRB + NEO_KHZ800);
-DonutHeaven donutHeaven(donutHeavenStrip);
+// 18 LEDs bei 144 Streifen
+//  8 LEDs bei 60 Steifen
+//
+
+#define LED_COUNT  8
+
+Adafruit_NeoPixel stripD2 = Adafruit_NeoPixel(LED_COUNT, 2, NEO_GRB + NEO_KHZ800);
+DonutHeaven d2(stripD2);
+
+Adafruit_NeoPixel stripD3 = Adafruit_NeoPixel(LED_COUNT, 3, NEO_GRB + NEO_KHZ800);
+DonutHeaven d3(stripD3);
+
+Adafruit_NeoPixel stripD4 = Adafruit_NeoPixel(LED_COUNT, 4, NEO_GRB + NEO_KHZ800);
+DonutHeaven d4(stripD4);
+
+Adafruit_NeoPixel stripD5 = Adafruit_NeoPixel(LED_COUNT, 5, NEO_GRB + NEO_KHZ800);
+DonutHeaven d5(stripD5);
+
+Adafruit_NeoPixel stripD6 = Adafruit_NeoPixel(LED_COUNT, 6, NEO_GRB + NEO_KHZ800);
+DonutHeaven d6(stripD6);
+
+Adafruit_NeoPixel stripD7 = Adafruit_NeoPixel(LED_COUNT, 7, NEO_GRB + NEO_KHZ800);
+DonutHeaven d7(stripD7);
+
+Adafruit_NeoPixel stripD8 = Adafruit_NeoPixel(LED_COUNT, 8, NEO_GRB + NEO_KHZ800);
+DonutHeaven d8(stripD8);
+
+Adafruit_NeoPixel stripD9 = Adafruit_NeoPixel(LED_COUNT, 9, NEO_GRB + NEO_KHZ800);
+DonutHeaven d9(stripD9);
+
+Adafruit_NeoPixel stripD12 = Adafruit_NeoPixel(LED_COUNT, 12, NEO_GRB + NEO_KHZ800);
+DonutHeaven d12(stripD12);
 
 int millies = 0;
 int deltaMillies = 25;
+int donutMode = 0;
 
 void setup() {
 
 	millies = 0;
 
-	donutHeavenStrip.setBrightness(255);
-	donutHeavenStrip.begin();
-	donutHeavenStrip.show(); // Initialize all pixels to 'off'
+	d2.setup();
+	d3.setup();
+	d4.setup();
+	d5.setup();
+	d6.setup();
+	d7.setup();
+	d8.setup();
+	d9.setup();
+	d12.setup();
 
 }
 
 void loop() {
 	millies = millies + deltaMillies;
 
-	if (millies >= 10000)
+	if (millies >= 5000)
 		millies = 0;
 
-	drawDonutHeaven();
-	delay(deltaMillies);
-}
-
-int donutMode = 7;
-
-void drawDonutHeaven() {
-
-	switch (donutMode) {
-	default:
-	case 0:
-		donutHeaven.drawLetterLauflichtSmooth(millies);
-		break;
-	case 1:
-		donutHeaven.drawFlashingDonut(millies);
-		break;
-	case 2:
-		donutHeaven.drawWheelAllColors(millies);
-		break;
-	case 3:
-		donutHeaven.drawBarGraphWheeled(millies);
-		break;
-	case 4:
-		donutHeaven.drawLauflichtRandomColor(millies);
-		break;
-	case 5:
-		donutHeaven.drawWheelAllColors(millies);
-		break;
-	case 6:
-		donutHeaven.drawWheelColorful(6);
-		break;
-	case 7:
-		donutHeaven.drawBarGraphWheeledColorfull(millies);
-		break;
-
-	}
 	if (millies == 0) {
 		donutMode++;
 		if (donutMode == 8)
 			donutMode = 0;
 	}
 
+	drawDonutHeaven();
+	delay(deltaMillies);
+
+}
+
+void drawDonutHeaven() {
+
+	switch (donutMode) {
+	default:
+	case 0:
+		d12.drawWheelAllColors(millies);
+		break;
+	case 1:
+		d12.drawLauflichtRandomColor(millies);
+		break;
+	case 2:
+		d12.drawRandomSegmentUSA(millies, 100);
+		break;
+	case 3:
+		d12.drawBarGraphWheeled(millies);
+		break;
+	case 4:
+		d12.drawDoubleLauflichtWheeled(millies);
+		break;
+	case 5:
+		d12.drawWheelColorful(6);
+		break;
+	case 6:
+		d12.drawRandomSegment(millies, 100);
+		break;
+	case 7:
+		d12.drawBarGraphWheeledColorfull(millies);
+		break;
+	}
+
+	d2.drawWheelAllColors(millies);
+	d3.drawLauflichtRandomColor(millies);
+	d4.drawRandomSegmentUSA(millies, 100);
+	d5.drawBarGraphWheeled(millies);
+	d6.drawDoubleLauflichtWheeled(millies);
+	d7.drawWheelColorful(millies);
+	d8.drawBarGraphWheeledColorfull(millies);
+	d9.drawRandomSegment(millies, 100);
 }
 

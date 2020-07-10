@@ -1,4 +1,4 @@
-714=2
+714=5
 Automatically\ import\ libraries=true
 Board=Arduino Nano
 Board\ Custom\ Option\ Selections=Processor\=ATmega328
@@ -6,9 +6,9 @@ Build\ before\ upload\ option=YES
 FuStatub=127
 FuStatus=100
 Open\ serial\ connections\ with\ the\ monitor=true
-Private\ Library\ Path=C\:\\dataP\\ws_git\\arduino-projects\\libraries;C\:/Users/Oliver/Arduino/libraries;
-Private\ hardware\ Path=C\:/Users/Oliver/Arduino/hardware;
+Private\ Library\ Path=C\:\\dataP\\ws_git\\arduino-projects\\libraries\nC\:/Users/Oliver/Arduino/libraries
+Private\ hardware\ Path=C\:/Users/Oliver/Arduino/hardware
 boards\ file=C\:\\dataP\\Tools\\Eclipse\\eclipseArduino\\arduinoPlugin\\packages\\arduino\\hardware\\avr\\1.6.9\\boards.txt
 eclipse.preferences.version=1
 lFsStatus=227
-upload\ Port=COM3
+upload\ Port=COM4

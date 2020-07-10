@@ -15,15 +15,16 @@ public:
 	virtual ~DonutHeaven();
 
 	void init();
+	void setup();
 
-	void drawFlashingDonut(int millies);
 	void drawWheel(int step);
-	void drawWheelColorful(int step);
+	void drawWheelColorful(int millies);
 	void drawWheelAllColors(int millies);
 	void drawLauflichtRandomColor(int millies);
+	void drawRandomSegment(int millies, int modulo);
+	void drawRandomSegmentUSA(int millies, int modulo);
+	void drawDoubleLauflichtWheeled(int millies);
 
-	void drawLetterLauflicht(int millies);
-	void drawLetterLauflichtSmooth(int millies);
 	void drawBarGraphWheeledColorfull(int millies);
 	void drawBarGraphWheeled(int millies);
 	int max;
@@ -34,15 +35,14 @@ public:
 	int anzLetters = 11;
 
 	int lauflichtStep = 0;
+	int lauflichtStep2 = 0;
 	uint32_t laufLichtColor;
-
-	void drawLetter(int index, uint32_t color);
-	void drawLetterColored(int index);
 
 	uint32_t getColorForLetter(int index);
 	uint32_t getColorForStripIndex(int index);
 	uint32_t getRandomColor(int brightness);
 	uint32_t getColorRotGelbGruen(int brightness);
+	uint32_t getColorRotBlauWeiss(int color);
 	uint32_t Wheel(byte WheelPos);
 	uint32_t getColorWhite(int brightness);
 	uint32_t getColorRed(int brightness);
