@@ -1,65 +1,9 @@
-16:04:55 **** Incremental Build of configuration Release for project DonutHeaven ****
+16:16:38 **** Incremental Build of configuration Release for project DonutHeaven ****
 "C:\\dataP\\Tools\\Eclipse\\eclipseArduino\\arduinoPlugin\\tools\\make\\make" all 
 'Building file: ../.ino.cpp'
 'Starting C++ compile'
 "C:\dataP\Tools\Eclipse\eclipseArduino\arduinoPlugin\tools\arduino\avr-gcc\4.8.1-arduino5/bin/avr-g++" -c -g -Os -std=gnu++11 -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -MMD -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10606 -DARDUINO_AVR_NANO -DARDUINO_ARCH_AVR     -I"C:\dataP\Tools\Eclipse\eclipseArduino\arduinoPlugin\packages\arduino\hardware\avr\1.6.9\cores\arduino" -I"C:\dataP\Tools\Eclipse\eclipseArduino\arduinoPlugin\packages\arduino\hardware\avr\1.6.9\variants\eightanaloginputs" -I"C:\dataP\ws_git\arduino-projects\libraries\Adafruit_NeoPixel" -MMD -MP -MF".ino.cpp.d" -MT".ino.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "../.ino.cpp"  -o  ".ino.cpp.o"   -Wall
 'Finished building: ../.ino.cpp'
-' '
-'Building file: ../DonutHeaven.cpp'
-'Starting C++ compile'
-"C:\dataP\Tools\Eclipse\eclipseArduino\arduinoPlugin\tools\arduino\avr-gcc\4.8.1-arduino5/bin/avr-g++" -c -g -Os -std=gnu++11 -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -MMD -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10606 -DARDUINO_AVR_NANO -DARDUINO_ARCH_AVR     -I"C:\dataP\Tools\Eclipse\eclipseArduino\arduinoPlugin\packages\arduino\hardware\avr\1.6.9\cores\arduino" -I"C:\dataP\Tools\Eclipse\eclipseArduino\arduinoPlugin\packages\arduino\hardware\avr\1.6.9\variants\eightanaloginputs" -I"C:\dataP\ws_git\arduino-projects\libraries\Adafruit_NeoPixel" -MMD -MP -MF"DonutHeaven.cpp.d" -MT"DonutHeaven.cpp.o" -D__IN_ECLIPSE__=1 -x c++ "../DonutHeaven.cpp"  -o  "DonutHeaven.cpp.o"   -Wall
-../DonutHeaven.cpp: In member function 'void DonutHeaven::drawWheel(int)':
-../DonutHeaven.cpp:39:38: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-  for (int i = 0; i < strip.numPixels(); i++) {
-                                      ^
-../DonutHeaven.cpp: In member function 'void DonutHeaven::drawWheelColorful(int)':
-../DonutHeaven.cpp:49:38: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-  for (int i = 0; i < strip.numPixels(); i++) {
-                                      ^
-../DonutHeaven.cpp: In member function 'void DonutHeaven::drawWheelAllColors(int)':
-../DonutHeaven.cpp:59:38: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-  for (int i = 0; i < strip.numPixels(); i++) {
-                                      ^
-../DonutHeaven.cpp: In member function 'void DonutHeaven::drawLauflichtRandomColor(int)':
-../DonutHeaven.cpp:67:40: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-   if (lauflichtStep == strip.numPixels()) {
-                                        ^
-../DonutHeaven.cpp:71:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-   for (int i = 0; i < strip.numPixels(); i++) {
-                                       ^
-../DonutHeaven.cpp: In member function 'void DonutHeaven::drawBarGraphWheeled(int)':
-../DonutHeaven.cpp:110:40: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-   if (lauflichtStep == strip.numPixels()) {
-                                        ^
-../DonutHeaven.cpp:116:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-   for (int i = 0; i < strip.numPixels(); i++) {
-                                       ^
-../DonutHeaven.cpp: In member function 'void DonutHeaven::drawBarGraphWheeledColorfull(int)':
-../DonutHeaven.cpp:137:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-   for (int i = 0; i < strip.numPixels(); i++) {
-                                       ^
-../DonutHeaven.cpp:138:55: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-    if (i <= lauflichtStep || i >= strip.numPixels() - lauflichtStep) {
-                                                       ^
-../DonutHeaven.cpp: In member function 'void DonutHeaven::drawRandomSegment(int, int)':
-../DonutHeaven.cpp:213:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-   for (int i = 0; i < strip.numPixels(); i++) {
-                                       ^
-../DonutHeaven.cpp: In member function 'void DonutHeaven::drawRandomSegmentUSA(int, int)':
-../DonutHeaven.cpp:238:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-   for (int i = 0; i < strip.numPixels(); i++) {
-                                       ^
-../DonutHeaven.cpp: In member function 'void DonutHeaven::drawDoubleLauflichtWheeled(int)':
-../DonutHeaven.cpp:256:44: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-   if (lauflichtStep == strip.numPixels() / 2) {
-                                            ^
-../DonutHeaven.cpp:260:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-   for (int i = 0; i < strip.numPixels(); i++) {
-                                       ^
-../DonutHeaven.cpp:261:59: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-    if (i == lauflichtStep || i == strip.numPixels() / 2 + lauflichtStep) {
-                                                           ^
-'Finished building: ../DonutHeaven.cpp'
 ' '
 'Starting combiner'
 "C:\dataP\Tools\Eclipse\eclipseArduino\arduinoPlugin\tools\arduino\avr-gcc\4.8.1-arduino5/bin/avr-gcc" -Os -Wl,--gc-sections -mmcu=atmega328p  -o "C:/dataP/ws_git/donut_heaven/Arduino/DonutHeaven/Release/DonutHeaven.elf"    ./.ino.cpp.o ./DonutHeaven.cpp.o ./LegLight8.cpp.o  ./libraries/Adafruit_NeoPixel/Adafruit_NeoPixel.cpp.o ./libraries/Adafruit_NeoPixel/esp8266.c.o   arduino.ar     "-LC:/dataP/ws_git/donut_heaven/Arduino/DonutHeaven/Release" -lm
@@ -96,5 +40,5 @@ Total            66463
 'Finished building target: DonutHeaven'
 ' '
 
-16:04:56 Build Finished (took 1s.364ms)
+16:16:39 Build Finished (took 1s.60ms)
 
